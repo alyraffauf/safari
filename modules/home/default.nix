@@ -10,6 +10,7 @@
     ./fastfetch.nix
     ./helix.nix
     ./joshuto.nix
+    ./nix-your-shell.nix
     ./oh-my-posh.nix
     ./ripgrep.nix
     ./uutils.nix
