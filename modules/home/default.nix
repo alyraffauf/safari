@@ -11,6 +11,7 @@
     ./fastfetch.nix
     ./helix.nix
     ./joshuto.nix
+    ./motd.nix
     ./nix-your-shell.nix
     ./oh-my-posh.nix
     ./ripgrep.nix
