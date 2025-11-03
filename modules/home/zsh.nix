@@ -28,6 +28,8 @@
         extended = true;
         ignoreAllDups = true;
       };
+
+      syntaxHighlighting.enable = true;
     };
   };
 }
