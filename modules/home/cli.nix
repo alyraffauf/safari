@@ -90,13 +90,15 @@ in {
       updates = ''
         # Update everything
         [group('system')]
-        update: update-nix-profile update-flatpaks
+        update: update-nix-profile ${lib.optionalString pkgs.stdenv.isLinux "update-flatpaks"}
 
-        # Update Flatpak apps
-        [group('flatpak')]
-        update-flatpaks:
-            @echo "Updating user Flatpak applications..."
-            -flatpak update -y
+        ${lib.optionalString pkgs.stdenv.isLinux ''
+          # Update Flatpak apps
+          [group('flatpak')]
+          update-flatpaks:
+              @echo "Updating user Flatpak applications..."
+              -flatpak update -y
+        ''}
 
         # Update Nix user profile
         [group('nix')]
