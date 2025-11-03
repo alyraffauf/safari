@@ -5,6 +5,7 @@
   ...
 }: {
   imports = [
+    ./cli.nix
     ./direnv.nix
     ./eza.nix
     ./fastfetch.nix
