@@ -12,7 +12,7 @@
         @printf '\033[1;36msafari cli\033[0m\n'
         @printf 'Just-based recipe runner for Safari.\n\n'
         @printf '\033[1;33mUsage:\033[0m safari <recipe> [args...]\n\n'
-        @njust --list --list-heading $'Available recipes:\n\n'
+        @safari --list --list-heading $'Available recipes:\n\n'
 
     ${lib.concatStringsSep "\n" (lib.attrValues cfg.recipes)}
   '';
@@ -51,8 +51,8 @@
     '';
   };
 in {
-  options.safari.cli.enable = {
-    enable = lib.mkEnableOption "safari cli helper";
+  options.safari.cli = {
+    enable = lib.mkEnableOption "safari cli helper" // {default = config.safari.enable;};
 
     recipes = lib.mkOption {
       type = lib.types.attrsOf lib.types.str;
