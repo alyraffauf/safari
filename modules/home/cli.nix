@@ -106,6 +106,6 @@ in {
       '';
     };
 
-    environment.systemPackages = [safariScript];
+    home.packages = [safariScript];
   };
 }
