@@ -2,6 +2,8 @@
 
 Welcome to the Safari Zone! This is an opionated set of home-manager modules that define my shell environment across devices.
 
+![](./_img/safari.png)
+
 ---
 
 # 🚀 Usage
