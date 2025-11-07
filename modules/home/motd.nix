@@ -3,7 +3,7 @@
   lib,
   ...
 }: {
-  options.safari.motd.enable = lib.mkEnableOption "motd" // {default = config.safari.enable;};
+  options.safari.motd.enable = lib.mkEnableOption "motd";
 
   config = lib.mkIf config.safari.motd.enable {
     programs.zsh.initContent = lib.mkIf config.safari.zsh.enable ''
