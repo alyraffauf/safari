@@ -16,6 +16,7 @@
   config = lib.mkIf config.safari.zoxide.enable {
     programs.zoxide = {
       enable = true;
+      enableFishIntegration = config.safari.fish.enable;
       enableZshIntegration = config.safari.zsh.enable;
 
       options =

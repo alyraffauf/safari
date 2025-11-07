@@ -9,6 +9,8 @@
     programs.oh-my-posh = {
       enable = true;
       useTheme = "onehalf.minimal";
+      enableFishIntegration = config.safari.fish.enable;
+      enableZshIntegration = config.safari.zsh.enable;
     };
   };
 }

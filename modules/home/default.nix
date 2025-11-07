@@ -9,6 +9,7 @@
     ./direnv.nix
     ./eza.nix
     ./fastfetch.nix
+    ./fish.nix
     ./helix.nix
     ./joshuto.nix
     ./motd.nix
