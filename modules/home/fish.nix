@@ -8,6 +8,7 @@
   config = lib.mkIf config.safari.fish.enable {
     programs.fish = {
       enable = true;
+      functions.fish_greeting = lib.mkDefault "";
 
       interactiveShellInit = ''
         # Set up Homebrew environment if available
