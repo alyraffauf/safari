@@ -8,9 +8,9 @@
   config = lib.mkIf config.safari.oh-my-posh.enable {
     programs.oh-my-posh = {
       enable = true;
-      useTheme = "onehalf.minimal";
       enableFishIntegration = config.safari.fish.enable;
       enableZshIntegration = config.safari.zsh.enable;
+      settings = builtins.fromJSON (builtins.readFile ./oh-my-posh.omp.json);
     };
   };
 }
