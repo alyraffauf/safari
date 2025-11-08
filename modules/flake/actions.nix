@@ -95,6 +95,8 @@
             runner =
               if lib.hasInfix "darwin" system
               then "macos-latest"
+              else if system == "aarch64-linux"
+              then "ubuntu-24.04-arm"
               else "ubuntu-latest";
             # Only include free disk space step for ubuntu x86_64
             needsFreeDiskSpace = system == "x86_64-linux";
