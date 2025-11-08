@@ -1,0 +1,36 @@
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.ref }}
+jobs:
+  build-test-aarch64-darwin:
+    runs-on: macos-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v5
+      with:
+        fetch-depth: 1
+    - name: Install Nix
+      uses: DeterminateSystems/nix-installer-action@main
+    - name: Build test@aarch64-darwin
+      run: nix build --accept-flake-config --print-out-paths .#homeConfigurations.test@aarch64-darwin.activationPackage
+  build-test-x86_64-linux:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Free Disk Space (Ubuntu)
+      uses: jlumbroso/free-disk-space@main
+    - name: Checkout
+      uses: actions/checkout@v5
+      with:
+        fetch-depth: 1
+    - name: Install Nix
+      uses: DeterminateSystems/nix-installer-action@main
+    - name: Build test@x86_64-linux
+      run: nix build --accept-flake-config --print-out-paths .#homeConfigurations.test@x86_64-linux.activationPackage
+name: build-home-manager
+'on':
+  push:
+    paths-ignore:
+    - '**/*.md'
+    - .github/**
+    - _img/**
+  workflow_dispatch: {}
