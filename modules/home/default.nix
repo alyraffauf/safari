@@ -16,6 +16,7 @@
     ./nix-your-shell.nix
     ./oh-my-posh.nix
     ./ripgrep.nix
+    ./topgrade.nix
     ./uutils.nix
     ./zellij.nix
     ./zoxide.nix

@@ -67,7 +67,7 @@ in {
     defaultRecipes = lib.mkOption {
       type = lib.types.bool;
       default = true;
-      description = "Whether to include default system management recipes";
+      description = "Whether to include default system management recipes.";
     };
   };
 
@@ -90,15 +90,8 @@ in {
       updates = ''
         # Update everything
         [group('system')]
-        update: update-nix-profile ${lib.optionalString pkgs.stdenv.isLinux "update-flatpaks"}
-
-        ${lib.optionalString pkgs.stdenv.isLinux ''
-          # Update Flatpak apps
-          [group('flatpak')]
-          update-flatpaks:
-              @echo "Updating user Flatpak applications..."
-              -flatpak update -y
-        ''}
+        update:
+            topgrade
 
         # Update Nix user profile
         [group('nix')]
