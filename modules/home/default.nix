@@ -15,6 +15,7 @@
     ./motd.nix
     ./nix-your-shell.nix
     ./oh-my-posh.nix
+    ./pay-respects.nix
     ./ripgrep.nix
     ./topgrade.nix
     ./uutils.nix
