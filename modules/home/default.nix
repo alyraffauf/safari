@@ -5,6 +5,7 @@
   ...
 }: {
   imports = [
+    ./bash.nix
     ./cli.nix
     ./direnv.nix
     ./eza.nix

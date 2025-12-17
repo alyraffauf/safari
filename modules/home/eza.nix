@@ -13,6 +13,7 @@
 
     programs.eza = {
       enable = true;
+      enableBashIntegration = config.safari.bash.enable;
       enableFishIntegration = config.safari.fish.enable;
       enableZshIntegration = config.safari.zsh.enable;
       extraOptions = ["--group-directories-first" "--header"];
