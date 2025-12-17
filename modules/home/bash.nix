@@ -14,6 +14,7 @@
       initExtra = ''
         # Set up Homebrew environment if available
         [[ -x /opt/homebrew/bin/brew ]] && eval $(/opt/homebrew/bin/brew shellenv)
+        [[ -x /home/linuxbrew/.linuxbrew/bin/brew ]] && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
         # Set TERM for Ghostty terminal
         if [[ "$TERM_PROGRAM" == "ghostty" ]]; then

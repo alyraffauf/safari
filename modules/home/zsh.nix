@@ -15,6 +15,7 @@
 
       initContent = ''
         [[ -x /opt/homebrew/bin/brew ]] && eval $(/opt/homebrew/bin/brew shellenv)
+        [[ -x /home/linuxbrew/.linuxbrew/bin/brew ]] && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
         if [[ "$TERM_PROGRAM" == "ghostty" ]]; then
           export TERM=xterm-256color
