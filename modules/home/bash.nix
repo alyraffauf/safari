@@ -3,7 +3,7 @@
   lib,
   ...
 }: {
-  options.safari.bash.enable = lib.mkEnableOption "bash" // {default = config.safari.enable;};
+  options.safari.bash.enable = lib.mkEnableOption "bash";
 
   config = lib.mkIf config.safari.bash.enable {
     programs.bash = {

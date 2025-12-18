@@ -3,7 +3,7 @@
   lib,
   ...
 }: {
-  options.safari.fish.enable = lib.mkEnableOption "fish" // {default = config.safari.enable;};
+  options.safari.fish.enable = lib.mkEnableOption "fish";
 
   config = lib.mkIf config.safari.fish.enable {
     programs.fish = {

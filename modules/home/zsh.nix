@@ -3,7 +3,7 @@
   lib,
   ...
 }: {
-  options.safari.zsh.enable = lib.mkEnableOption "zsh" // {default = config.safari.enable;};
+  options.safari.zsh.enable = lib.mkEnableOption "zsh";
 
   config = lib.mkIf config.safari.zsh.enable {
     programs.zsh = {
